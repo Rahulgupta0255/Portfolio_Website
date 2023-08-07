@@ -1,0 +1,412 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper
+{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.container
+{
+    width: 1200px;
+    margin: 0  auto;
+
+}
+#but
+{
+    background-color: red;
+    color: white;
+    border-radius: 2.8rem;
+    height: 80px;
+    width: 150px;
+    font-weight:300;
+    font-size: large;
+    cursor: pointer;
+    scale: (0);
+}
+#but:hover
+{
+    color: black;
+    scale:(1);
+    box-shadow: 1.2rem;
+}
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 1rem;
+
+}
+.logocontainer img{
+    height: 50px;
+}
+.logocontainer
+{
+    display: flex;
+   align-items: center;
+   justify-content: baseline;
+
+}
+.navitems
+{
+    display: flex;
+    gap: 2rem;
+    padding: 0.4rem;
+
+
+}
+.logotext
+{
+    /* margin-left: -1.2rem; */
+    font-size: 28px;
+}
+.navitems div a
+{
+    color: black;
+}
+
+.navitems div{
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+    
+
+}
+a{
+    text-decoration: none;
+}
+
+.navitems div :hover
+{
+    font-weight: bold;
+   
+}
+.herosection
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    gap: 4rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+.fadedtext
+{
+    position: absolute;
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231 , 231 , 231);
+
+    bottom:  -16px;
+    left: -5px;
+    font-weight: bold;
+    transition: all 3s;
+}
+
+.herosectionleft
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.herosectionheading
+{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500px;
+    
+}
+.role
+{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.herosectionsubheading
+{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+
+.herosectiondescription
+{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+#userimg
+{
+    
+    height: 550px;
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite; 
+}
+
+
+@keyframes scaleImage {
+    0%
+    {
+        filter: grayscale(1);
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.1);
+        filter: grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+    100%
+    {
+        transform: scale(1);
+        filter: grayscale(0);
+
+    }
+}
+.projectsection
+{
+    background-color: rgb(231, 231, 231);
+    margin: 4rem;
+
+}
+.pageheader
+{
+    color: red;
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+.projectcontainer
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+}
+.projectcard{
+    width: 90%;
+    height: 550px;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+    
+}
+.projectcard::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    /* transform: scaleX(1); */
+}
+.projectcard::before
+{
+    content:" ";
+    position:absolute ;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg , #343d68 , #343d68be , #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+
+}
+.projectcard:hover::before
+{
+    transform: scaleX(1);
+}
+#project1
+{
+    background-image: url(car.png);
+    background-size: cover;
+}
+#project2
+{
+    margin-left: 120px;
+    background-image: url(project2.png);
+    background-size: cover;
+}
+#project3
+{
+    background-image: url(project3.png);
+    background-size: cover;
+}
+#project4
+{
+    margin-left: 120px;
+    background-image: url(project4.png);
+    background-size: cover;
+}
+.projectnumber
+{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 10;
+    /* display: none; */
+    opacity: 0;
+}
+.projectcard:hover .projectnumber
+{
+    /* display: block; */
+    transition: all 1s;
+    opacity: 1;
+
+}
+.projectnumberleft
+{
+    right: -40px;
+    top: -45px;
+
+}
+.projectcontent
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.4s;
+
+}
+.projectcontentleft
+{
+    left: 10%;
+}
+.projectcontentright
+{
+    right: 10%;
+}
+
+.projectskillcontainer
+{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.projectskill{
+    width: 40px;
+}
+.projectheading
+{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.projectsubheading
+{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+.btngrp
+{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+.icon:hover
+{
+    color: orange;
+    transition: all 0.4s;
+}
+.projectcard:hover .projectcontent
+{
+    transform: scale(1.1);
+}
+@media (max-width: 1300px) {
+    .pageheader{
+        padding-top: 30px;
+        color: var(--bg0range);
+        text-align: center;
+        font-size: 40px;
+
+    }
+    .projectcontainer
+    {
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+    .projectcard
+    {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+    .projectcontent
+    {
+        scale: 0.5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .projectcontentleft
+    {
+        left: 0;
+    }
+    .projectheading
+    {
+        font-size: 40px;
+        width: 100%;
+    }
+    .projectsubheading
+    {
+        width: 100%;
+    }
+    #project2
+    {
+        margin-left: 0;
+    }
+    #project4
+    {
+        margin-left: 0;
+    }
+    .projectskillcontainer
+    {
+        width: 100%;
+    }
+    .projectskill
+    {
+        width: 35px;
+    }
+    .projectcard:hover  .projectnumber
+    {
+        display: none;
+    }
+    .projectcard:hover  .projectcontent{
+        scale: 0.55;
+    }
+}
